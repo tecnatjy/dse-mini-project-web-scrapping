@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log Out</button>
+</form>
+<!-- <img src="../static/stock_price_volume.png" alt="Stock Price and Volume">
+<img src="../static/closing_price.png" alt="Closing Price">
+<img src="../static/MACD.png" alt="MACD">
+<img src="../static/volatility.png" alt="Volatility">
+<img src="../static/volume_traded.png" alt="Volumn traded">
+<img src="../static/stock_price.png" alt="Stock Price"> -->
+<style>
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    .analysis-section {
+        margin-bottom: 30px;
+    }
+</style>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">YTL Power Stock Analysis - A Comprehensive Overview</h2>
+
+    <div class="analysis-section">
+        <h3>Closing Price Trends</h3>
+        <p>The closing price of YTL Power's stock has been trending upwards, indicating a strong bullish sentiment in the market. The graph below provides a visual representation of the closing price movement over time.</p>
+        <img src="{% static 'closing_price.png' %}" alt="Closing Price Trend" class="img-fluid">
+    </div>
+
+    <div class="analysis-section">
+        <h3>Volume Traded Dynamics</h3>
+        <p>Trading volume reflects the total number of shares traded. Spikes in volume often correspond with significant company or market events, as seen in the graph below for YTL Power.</p>
+        <img src="{% static 'volume_traded.png' %}" alt="Volume Traded" class="img-fluid">
+    </div>
+
+    <div class="analysis-section">
+        <h3>Momentum and Trend Reversals</h3>
+        <p>The MACD (Moving Average Convergence Divergence) is a momentum indicator that helps identify trend direction and reversals. The MACD line (difference between the 12-day and 26-day EMA) and the signal line (9-day EMA of MACD) are plotted below.</p>
+        <img src="{% static 'MACD.png' %}" alt="MACD Indicator" class="img-fluid">
+    </div>
+
+    <div class="analysis-section">
+        <h3>Stock Price Volatility</h3>
+        <p>Volatility measures the price variation of a stock over time. The graph below illustrates the volatility of YTL Power's stock, providing insight into its risk and stability.</p>
+        <img src="{% static 'volatility.png' %}" alt="Stock Price Volatility" class="img-fluid">
+    </div>
+
+    <div class="analysis-section">
+        <h3>Sentiment and Word Cloud Analysis</h3>
+        <p>Sentiment analysis evaluates the public mood towards YTL Power's stock, while the word cloud visualizes the frequency of related terms. Both are depicted below.</p>
+        <img src="{% static 'sentiment_polarity.png' %}" alt="Sentiment Polarity" class="img-fluid">
+        <img src="{% static 'wordcloud.png' %}" alt="Word Cloud" class="img-fluid">
+    </div>
+
+    <div class="analysis-section">
+        <h3>Overall Stock Performance</h3>
+        <p>The stock price chart combines price changes and trading volume to provide a snapshot of YTL Power's historical performance, as shown below.</p>
+        <img src="{% static 'stock_price.png' %}" alt="Overall Stock Performance" class="img-fluid">
+    </div>
+
+    <div class="analysis-section">
+        <h3>Summary</h3>
+        <p>In summary, YTL Power's stock has exhibited a positive price movement with fluctuating volumes, indicative of investor interest and market reactions. The inclusion of volatility and sentiment analysis provides a deeper understanding of the stock's market position and potential future direction.</p>
+    </div>
+</div>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
