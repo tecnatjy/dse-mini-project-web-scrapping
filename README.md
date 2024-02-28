@@ -17,7 +17,7 @@ To analyze the stock data, run the `ytl_stock_analysis.ipynb` notebook.
 For news sentiment analysis, run the `news_scraping.ipynb` notebook.
 
 ## Screenshoots
-![Home Page before login](./ads_miniproject/static/Screenshot 2024-02-28 14194-8.png)
+![Home Page before login](../ads_miniproject/static/Screenshot 2024-02-28 14194-8.png)
 
 
 ## Findings
