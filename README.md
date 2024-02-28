@@ -12,8 +12,13 @@ pip install pandas matplotlib textblob
 ```
 
 ## Usage
+Seperated Django website in ads_miniproject folder and Jupyter notebook in base folder.
 To analyze the stock data, run the `ytl_stock_analysis.ipynb` notebook. 
 For news sentiment analysis, run the `news_scraping.ipynb` notebook.
+
+## Screenshoots
+![Home Page before login](./ads_miniproject/static/Screenshot 2024-02-28 14194-8.png)
+
 
 ## Findings
 - The stock price of YTL Power has shown an upward trend over the year.
@@ -24,5 +29,3 @@ For news sentiment analysis, run the `news_scraping.ipynb` notebook.
 Future analyses could benefit from the inclusion of news publication dates to correlate news sentiment with stock price changes more accurately. 
 Additionally, more sophisticated natural language processing techniques could be employed to understand the context of the news better.
 
-## Credits
-This analysis was conducted using data from various financial and news platforms. Sentiment analysis was powered by the TextBlob library.
