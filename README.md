@@ -17,8 +17,16 @@ To analyze the stock data, run the `ytl_stock_analysis.ipynb` notebook.
 For news sentiment analysis, run the `news_scraping.ipynb` notebook.
 
 ## Screenshoots
-![Home Page before login](../ads_miniproject/static/Screenshot 2024-02-28 14194-8.png)
-
+- This is the home page when you first start in local host http://127.0.0.1:8000/ <br />
+![Home Page before login](https://github.com/tecnatjy/dse-mini-project-web-scrapping/blob/dev/ads_miniproject/static/Screenshot%202024-02-28%2014194-8.png)<br />
+- Go to the login page, if you do not have any account, please click on the Register button.
+![Login page](https://github.com/tecnatjy/dse-mini-project-web-scrapping/blob/dev/ads_miniproject/static/Screenshot%202024-02-28%2014201-5.png)<br />
+- Register a new account with a alphanumeric password that is more than 8 characters.
+![Registration page](https://github.com/tecnatjy/dse-mini-project-web-scrapping/blob/dev/ads_miniproject/static/Screenshot%202024-02-28%2014210-4.png)<br />
+- Type in the username and password that you register for loging in to the home page.
+![Login page with username and password](https://github.com/tecnatjy/dse-mini-project-web-scrapping/blob/dev/ads_miniproject/static/Screenshot%202024-02-28%20141844.png)<br />
+- This if after you login with the correct username and password.
+![Home Page after login](https://github.com/tecnatjy/dse-mini-project-web-scrapping/blob/dev/ads_miniproject/static/Screenshot%202024-02-28%20141917.png)
 
 ## Findings
 - The stock price of YTL Power has shown an upward trend over the year.
